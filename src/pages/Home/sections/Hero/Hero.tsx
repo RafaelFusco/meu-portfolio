@@ -12,6 +12,12 @@ const Hero = () => {
         height: "100vh",
         display: "flex",
         alignItems: "center",
+        [theme.breakpoints.up('xs')]: {
+            paddingTop: "50px"
+        },
+        [theme.breakpoints.up('md')]: {
+            paddingTop: "0"
+        }
     }))
 
     const StyledImg = styled("img")(() => ({
@@ -24,7 +30,6 @@ const Hero = () => {
         <>
             <StyledHero>
                 <Container maxWidth="lg">
-
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={5} display="flex" justifyContent="center">
                             <StyledImg src={Avatar} />
@@ -35,7 +40,7 @@ const Hero = () => {
 
                             <Grid container display="flex" justifyContent="center" spacing={3} width="80%" marginTop={0.5}>
                                 <Grid item xs={12} md={6} display="flex" justifyContent="center">
-                                    <StyledButton>
+                                    <StyledButton onClick={() => console.log("download")}>
                                         <DownloadIcon />
                                         <Typography>
                                             Download CV
@@ -43,7 +48,7 @@ const Hero = () => {
                                     </StyledButton>
                                 </Grid>
                                 <Grid item xs={12} md={6} display="flex" justifyContent="center">
-                                    <StyledButton>
+                                    <StyledButton onClick={() => console.log("contatado")}>
                                         <MailOutlineIcon />
                                         <Typography>
                                             Contate-me
@@ -51,14 +56,12 @@ const Hero = () => {
                                     </StyledButton>
                                 </Grid>
                             </Grid>
-
-
                         </Grid>
                     </Grid>
 
                 </Container>
 
-            </StyledHero>
+            </StyledHero >
         </>
     )
 }

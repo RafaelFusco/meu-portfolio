@@ -1,17 +1,15 @@
 import { AppBar, MenuItem, Toolbar, styled } from "@mui/material"
-import theme from "../../theme"
-import { Style } from "@mui/icons-material"
 
 const NavBar = () => {
 
-    const StyledToolbar = styled(Toolbar)((theme) => ({
+    const StyledToolbar = styled(Toolbar)(() => ({
         display: "flex",
         justifyContent: "space-evenly"
     }))
 
     return (
         <>
-            <AppBar position="absolute">
+            <AppBar position="fixed">
                 <StyledToolbar>
                     <MenuItem>Sobre</MenuItem>
                     <MenuItem>Habilidades</MenuItem>

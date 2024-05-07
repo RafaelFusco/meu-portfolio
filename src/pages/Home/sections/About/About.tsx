@@ -78,7 +78,7 @@ const About = () => {
             <Grid item xs={12} display="flex" flexDirection="column" alignItems="center">
               <StyledTitle>Sobre mim</StyledTitle>
               <StyledXpDesc>
-                Olá! Sou um desenvolvedor front-end com uma base sólida em HTML, CSS e JavaScript.<br /> Atualmente, estou me aprofundando em React.<br /> Possuo habilidades de comunicação em equipe, consigo colaborar efetivamente, compartilhar ideias de forma clara e ouvir as contribuições dos outros.<br /> Estou em busca do meu primeiro estágio na área de desenvolvimento e ansioso para aplicar o que aprendi. <br /> Estou dedicado a contribuir com meu melhor esforço para a equipe e estou confiante de que essa experiência será fundamental para o meu desenvolvimento profissional como desenvolvedor front-end.
+                Olá! Sou um desenvolvedor front-end com uma base sólida em HTML, CSS e JavaScript.<br /> Atualmente, estou me aprofundando em React.<br /> Possuo habilidades de comunicação em equipe, consigo colaborar efetivamente, compartilhar ideias de forma clara e ouvir as contribuições dos outros.<br /> Estou em busca do meu primeiro estágio na área de desenvolvimento, ansioso para aplicar o que aprendi e dedicado a contribuir com meu melhor esforço para a equipe. <br /> Estou dedicado a contribuir com meu melhor esforço para a equipe e estou confiante de que essa experiência será fundamental para o meu desenvolvimento profissional como desenvolvedor front-end.
               </StyledXpDesc>
             </Grid>
             <Grid item xs={12} display="flex" flexDirection="column" alignItems="center">

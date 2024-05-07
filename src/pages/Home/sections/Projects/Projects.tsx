@@ -5,6 +5,12 @@ import { SwiperSlide } from "swiper/react";
 import SliderItem from "../../../../components/SliderItem/SliderItem";
 import { useState, useEffect } from 'react';
 
+import img1 from "../../../../assets/images/project-1.png"
+import img2 from "../../../../assets/images/project-2.png"
+import img3 from "../../../../assets/images/project-3.png"
+import img4 from "../../../../assets/images/project-4.png"
+import img5 from "../../../../assets/images/project-5.png"
+
 import 'swiper/css'
 
 const Projects = () => {
@@ -36,35 +42,35 @@ const Projects = () => {
 
   const slides = [
     {
-      img: "/src/assets/images/project-1.fw.png",
+      img: img1,
       title: "Caça Palavras",
       deployLink: "https://rafaelfusco.github.io/Caca-Palavras/",
       codeLink: "https://github.com/RafaelFusco/Caca-Palavras",
       t1: "HTML, Javascript e Sass",
     },
     {
-      img: "/src/assets/images/project-2.fw.png",
+      img: img2,
       title: "Jogo de luta",
       deployLink: "https://rafaelfusco.github.io/Jogo-de-luta/",
       codeLink: "https://github.com/RafaelFusco/Jogo-de-luta",
       t1: "HTML, Javascript e Sass",
     },
     {
-      img: "/src/assets/images/project-3.fw.png",
+      img: img3,
       title: "Quadro de desenhos",
       deployLink: "https://rafaelfusco.github.io/Quadro-de-Desenhos/",
       codeLink: "https://github.com/RafaelFusco/Quadro-de-Desenhos",
       t1: "HTML, Javascript e CSS",
     },
     {
-      img: "/src/assets/images/project-4.fw.png",
+      img: img4,
       title: "Jogo da velha",
       deployLink: "https://rafaelfusco.github.io/Jogo-da-Velha/",
       codeLink: "https://github.com/RafaelFusco/Jogo-da-Velha",
       t1: "HTML, Javascript e CSS",
     },
     {
-      img: "/src/assets/images/project-5.fw.png",
+      img: img5,
       title: "Jogo da memória",
       deployLink: "https://astonishing-daifuku-a6c609.netlify.app/",
       codeLink: "https://github.com/RafaelFusco/react-jogo-da-memoria",

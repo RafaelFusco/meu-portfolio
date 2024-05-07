@@ -1,7 +1,5 @@
-import { Container, Grid, lighten, styled } from "@mui/material";
+import { Container, Grid, darken, lighten, styled } from "@mui/material";
 import theme from "../../../../theme";
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import SchoolIcon from '@mui/icons-material/School';
 
 const About = () => {
 
@@ -10,20 +8,10 @@ const About = () => {
     height: "calc(100vh - 64px)",
     display: "flex",
     alignItems: "center",
-
-    [theme.breakpoints.down('sm')]: {
-      height: "calc(100vh - 56px)",
-    },
-    [theme.breakpoints.up('md')]: {
-      height: "calc(100vh - 64px)",
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: "calc(100vh - 64px)",
-    },
   }));
 
   const StyledTitle = styled("div")(() => ({
-    color: "primary.main",
+    color: darken(theme.palette.primary.main, 0.2),
     textAlign: "center",
     fontSize: "2rem",
     fontWeight: "400",
@@ -36,51 +24,19 @@ const About = () => {
     }
   }));
 
-  const StyledGridXp = styled("div")(() => ({
-    display: "flex",
-    gap: "50px",
-    [theme.breakpoints.down('sm')]: {
-      gap: "0px"
-    }
-  }));
-
-  const StyledXpTitle = styled("div")(() => ({
-    color: theme.palette.primary.main,
-    fontSize: "1.1rem",
-    textAlign: "center",
-    fontWeight: "400",
-    [theme.breakpoints.down('sm')]: {
-      fontSize: "1.2rem",
-    },
-    [theme.breakpoints.between('md', 'lg')]: {
-      fontSize: "1rem",
-      fontWeight: "500",
-    }
-  }));
-
-  const StyledXpSubtitle = styled("div")(() => ({
-    color: theme.palette.primary.main,
-    fontSize: "0.7rem",
-    textAlign: "center",
-    width: '70%',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: "0.8rem",
-    }
-  }));
-
   const StyledXpDesc = styled("div")(() => ({
-    color: theme.palette.primary.main,
+    color:  darken(theme.palette.primary.main, 0.4),
     fontSize: "1rem",
     fontWeight: "450",
     textAlign: "center",
-    width: "85%",
-    height: "40%",
+    width: "60%",
+    height: "100%",
     flexWrap: "wrap",
     marginTop: "10px",
     overflow: "auto",
     [theme.breakpoints.down('sm')]: {
       fontSize: "1rem",
-      height: "180px",
+      height: "300px",
     },
     [theme.breakpoints.between('md', 'lg')]: {
       height: "100px",
@@ -101,10 +57,10 @@ const About = () => {
   }));
 
   const StyledSkills = styled("div")(() => ({
-    color: theme.palette.primary.main,
+    color: darken(theme.palette.primary.main, 0.4),
     fontSize: "1rem",
     textAlign: "center",
-    border: `1px solid ${lighten(theme.palette.primary.light, 0.8)}`,
+    borderBottom: `1px solid ${lighten(theme.palette.primary.light, 0.7)}`,
     width: "110px",
     height: "max-content",
     margin: "5px 15px",
@@ -116,27 +72,13 @@ const About = () => {
 
   return (
     <>
-      <StyledAbout>
+      <StyledAbout id="about">
         <Container maxWidth="lg">
-          <Grid container>
+          <Grid container display="flex">
             <Grid item xs={12} display="flex" flexDirection="column" alignItems="center">
               <StyledTitle>Sobre mim</StyledTitle>
-              <StyledGridXp>
-                <Grid item display="flex" flexDirection="column" alignItems="center" marginBottom="20px">
-                  <WorkspacePremiumIcon fontSize="small" />
-                  <StyledXpTitle>Experiencia</StyledXpTitle>
-                  <StyledXpSubtitle>2+ Anos</StyledXpSubtitle>
-                  <StyledXpSubtitle>Desenvolvedor Frontend</StyledXpSubtitle>
-                </Grid>
-                <Grid item display="flex" flexDirection="column" alignItems="center">
-                  <SchoolIcon fontSize="small" />
-                  <StyledXpTitle>Educação</StyledXpTitle>
-                  <StyledXpSubtitle>Cursando Sistemas de Informação</StyledXpSubtitle>
-                  <StyledXpSubtitle>7 Cursos de Frontend</StyledXpSubtitle>
-                </Grid>
-              </StyledGridXp>
               <StyledXpDesc>
-                Olá! Sou um desenvolvedor front-end apaixonado pela criação de experiências web. Com uma base sólida em HTML, CSS e JavaScript, estou atualmente descobrindo mais sobre React. Tenho habilidades de comunicação em equipe. Consigo colaborar efetivamente, compartilhar ideias de forma clara e ouvir as contribuições dos outrosEstou buscando meu primeiro estágio na área de desenvolvimento, ansioso para aplicar o que aprendi. Estou comprometido em contribuir com meu melhor esforço para a equipe. Estou confiante de que esta experiência será fundamental para meu desenvolvimento profissional como desenvolvedor front-end.
+                Olá! Sou um desenvolvedor front-end com uma base sólida em HTML, CSS e JavaScript.<br /> Atualmente, estou me aprofundando em React.<br /> Possuo habilidades de comunicação em equipe, consigo colaborar efetivamente, compartilhar ideias de forma clara e ouvir as contribuições dos outros.<br /> Estou em busca do meu primeiro estágio na área de desenvolvimento e ansioso para aplicar o que aprendi. <br /> Estou dedicado a contribuir com meu melhor esforço para a equipe e estou confiante de que essa experiência será fundamental para o meu desenvolvimento profissional como desenvolvedor front-end.
               </StyledXpDesc>
             </Grid>
             <Grid item xs={12} display="flex" flexDirection="column" alignItems="center">

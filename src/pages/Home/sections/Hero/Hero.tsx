@@ -8,16 +8,10 @@ import StyledButton from "../../../../components/StyledButton/StyleButton";
 const Hero = () => {
 
     const StyledHero = styled("div")(() => ({
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: "transparent",
         height: "100vh",
         display: "flex",
         alignItems: "center",
-        [theme.breakpoints.up('xs')]: {
-            paddingTop: "50px"
-        },
-        [theme.breakpoints.up('md')]: {
-            paddingTop: "0"
-        }
     }))
 
     const StyledImg = styled("img")(() => ({
@@ -28,7 +22,7 @@ const Hero = () => {
 
     return (
         <>
-            <StyledHero>
+            <StyledHero id="start">
                 <Container maxWidth="lg">
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={5} display="flex" justifyContent="center">
@@ -40,15 +34,15 @@ const Hero = () => {
 
                             <Grid container display="flex" justifyContent="center" spacing={3} width="80%" marginTop={0.5}>
                                 <Grid item xs={12} md={6} display="flex" justifyContent="center">
-                                    <StyledButton onClick={() => console.log("download")}>
+                                    <StyledButton onClick={() => window.open("https://drive.google.com/file/d/1UeZRzVuHAGXRX0VsMOtTdMDE6yQHmT8J/view?usp=drive_link", "_blank", "noopener")}>
                                         <DownloadIcon />
                                         <Typography>
-                                            Download CV
+                                            Meu Currículo
                                         </Typography>
                                     </StyledButton>
                                 </Grid>
                                 <Grid item xs={12} md={6} display="flex" justifyContent="center">
-                                    <StyledButton onClick={() => console.log("contatado")}>
+                                    <StyledButton onClick={() => window.open("mailto:rafaelfusco2000@gmail.com?subject=Contato%20do%20Portf%C3%B3lio", '_blank', "noopener" )}>
                                         <MailOutlineIcon />
                                         <Typography>
                                             Contate-me
